@@ -1,0 +1,126 @@
+@import "pui-variables.scss";
+
+html, body {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.wrap, .content {
+    position: relative;
+    height: calc(100% - 90px);
+}
+
+.wrap {
+    display: flex;
+    @media (min-width: 720px) {
+        .content {
+            height: 100%;
+            flex-basis: 200px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 200px;
+        }
+    }
+    @media (min-width: 1000px) {
+        .content {
+            height: 100%;
+            flex-grow: 0;
+            flex-shrink: 0;
+            flex-basis: 75%;
+            width: 75%;
+	    padding: 25px 50px;
+        }
+    }
+    @media (min-width: 720px) {
+        .sub-navigation {
+            height: 100%;
+            background-color: $dark-11;
+            flex-basis: 200px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 200px;
+	    padding: 75px 0;
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+		li {
+			a {
+				padding: 10px 0 10px 50px;
+				display: block;
+			}
+		}
+            }
+        }
+    }
+    @media (min-width: 1000px) {
+        .sub-navigation {
+            flex-basis: 25%;
+            width: 25%;
+            padding: 75px 0;
+        }
+    }
+}
+
+.pui-svg{
+    width: 50px;
+}
+.front, .back {
+    fill: none;
+    stroke: $pivotal-teal;
+}
+
+.front {
+    stroke-width: 4px;
+}
+
+.back {
+    stroke-width: 4px;
+    opacity: .5;
+}
+
+
+.main-navigation {
+    display: flex;
+    padding: 15px 50px;
+    align-items: center;
+    .logo {
+        flex: 1;
+        display: flex;
+        align-items: center;
+    }
+    .logo-type {
+        color: $dark-11;
+        flex: 1;
+        padding: 0 20px;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: 600;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            flex: 1;
+            padding: 0 20px;
+        }
+    }
+}
+
+.footer {
+    display: flex;
+    padding: 25px 50px;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .logo {
+        flex: 1;
+        max-width: 100px;
+    }
+}

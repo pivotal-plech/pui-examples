@@ -1,0 +1,5 @@
+---
+applications:
+- name: pui-examples
+  mem: 500MB
+  buildpack: https://github.com/cloudfoundry/staticfile-buildpack
